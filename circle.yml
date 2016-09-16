@@ -2,4 +2,5 @@
 test:
   override:
     - echo $GOPATH
+    - sudo chown ubuntu:ubuntu /usr/local/go_workspace
     - "GOPATH=/usr/local/go_workspace make test"
