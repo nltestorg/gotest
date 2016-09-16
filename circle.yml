@@ -1,6 +1,7 @@
 ---
 test:
   override:
+    - echo $GOPATH
     - "make test"
 
 machine:
