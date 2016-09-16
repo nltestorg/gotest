@@ -1,8 +1,7 @@
 ---
 test:
   override:
-    - echo $GOPATH
-    - "make test"
+    - "GOPATH=/home/ubuntu/.go_workspace make test"
 
 machine:
   environment:
