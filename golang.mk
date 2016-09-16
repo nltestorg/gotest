@@ -3,28 +3,7 @@
 SHELL := /bin/bash
 .PHONY: golang-godep-vendor golang-test-deps $(GODEP)
 
-# This block checks and confirms that the proper Go toolchain version is installed.
-# arg1: golang version
-define golang-version-check
-GOVERSION := $(shell go version | grep $(1))
-_ := $(if \
-	$(shell go version | grep $(1)), \
-	@echo "", \
-	$(error "must be running Go version $(1)"))
-endef
-
 export GO15VENDOREXPERIMENT=1
-
-# FGT is a utility that exits with 1 whenever any stderr/stdout output is recieved.
-FGT := $(GOPATH)/bin/fgt
-$(FGT):
-	go get github.com/GeertJohan/fgt
-
-# Godep is a tool used to manage Golang dependencies in the style of the Go 1.5
-# vendoring experiment.
-GODEP := $(GOPATH)/bin/godep
-$(GODEP):
-	go get -u github.com/tools/godep
 
 # Golint is a tool for linting Golang code for common errors.
 GOLINT := $(GOPATH)/bin/golint
