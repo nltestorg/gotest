@@ -1,7 +1,7 @@
 ---
 test:
   override:
-    - "GOPATH=/usr/local/go_workspace make test"
+    - "sudo GOPATH=/usr/local/go_workspace make test"
 
 machine:
   environment:
