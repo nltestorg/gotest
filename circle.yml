@@ -6,7 +6,6 @@ test:
     #- sudo chown -R ubuntu:ubuntu /home/ubuntu/.go_workspace
     - sudo chown -R ubuntu:ubuntu /home/ubuntu/.go_project
     #/home/ubuntu/.go_workspace:/usr/local/go_workspace:/home/ubuntu/.go_project
-      /usr/ubuntu
     #- export GOPATH=/usr/local/go_workspace
     - export GOPATH=/home/ubuntu/.go_project
     - GOPATH=/home/ubuntu/.go_project make test
