@@ -2,9 +2,9 @@
 test:
   override:
     - echo $GOPATH
-    - sudo chown -R ubuntu:ubuntu /usr/local/go_workspace
-    - sudo chown -R ubuntu:ubuntu /home/ubuntu/.go_workspace
+    #- sudo chown -R ubuntu:ubuntu /usr/local/go_workspace
+    #- sudo chown -R ubuntu:ubuntu /home/ubuntu/.go_workspace
     - sudo chown -R ubuntu:ubuntu /home/ubuntu/.go_project
     #- export GOPATH=/usr/local/go_workspace
     - export GOPATH=/usr/ubuntu/.go_project
-    - make test
+    - GOPATH=/usr/ubuntu/.go_project make test
